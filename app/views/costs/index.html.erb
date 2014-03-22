@@ -1,0 +1,37 @@
+<h1>Listing costs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Stopover</th>
+      <th>Content</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @costs.each do |cost| %>
+      <tr>
+        <td><%= cost.name %></td>
+        <td><%= cost.from %></td>
+        <td><%= cost.to %></td>
+        <td><%= cost.stopover %></td>
+        <td><%= cost.content %></td>
+        <td><%= cost.price %></td>
+        <td><%= link_to 'Show', cost %></td>
+        <td><%= link_to 'Edit', edit_cost_path(cost) %></td>
+        <td><%= link_to 'Destroy', cost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cost', new_cost_path %>

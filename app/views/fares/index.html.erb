@@ -1,0 +1,37 @@
+<h1>Listing fares</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Stopover</th>
+      <th>Category</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fares.each do |fare| %>
+      <tr>
+        <td><%= fare.name %></td>
+        <td><%= fare.price %></td>
+        <td><%= fare.from %></td>
+        <td><%= fare.to %></td>
+        <td><%= fare.stopover %></td>
+        <td><%= fare.category_id %></td>
+        <td><%= link_to 'Show', fare %></td>
+        <td><%= link_to 'Edit', edit_fare_path(fare) %></td>
+        <td><%= link_to 'Destroy', fare, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fare', new_fare_path %>

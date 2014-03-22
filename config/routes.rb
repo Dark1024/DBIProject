@@ -1,4 +1,28 @@
 DbProject::Application.routes.draw do
+  resources :shipments
+
+  resources :tickets
+
+  resources :trips
+
+  resources :clients
+
+  resources :fares
+
+  resources :schedules
+
+  resources :costs
+
+  resources :categories
+
+  resources :autobuses
+
+  resources :employees
+
+  resources :departments
+
+  resources :stations
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

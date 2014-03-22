@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @shipment.client_id %>
+</p>
+
+<p>
+  <strong>Addressee:</strong>
+  <%= @shipment.addressee %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @shipment.phone_number %>
+</p>
+
+<p>
+  <strong>Trip:</strong>
+  <%= @shipment.trip_id %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @shipment.cost_id %>
+</p>
+
+<%= link_to 'Edit', edit_shipment_path(@shipment) %> |
+<%= link_to 'Back', shipments_path %>

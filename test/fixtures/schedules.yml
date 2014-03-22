@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  departure_time: 2014-03-22 04:43:09
+  arrival_time: 2014-03-22 04:43:09
+
+two:
+  departure_time: 2014-03-22 04:43:09
+  arrival_time: 2014-03-22 04:43:09

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  client_id: 1
+  employee_id: 1
+  fare_id: 1
+  trip_id: 1
+  trip_date: 2014-03-22 04:58:24
+
+two:
+  client_id: 1
+  employee_id: 1
+  fare_id: 1
+  trip_id: 1
+  trip_date: 2014-03-22 04:58:24

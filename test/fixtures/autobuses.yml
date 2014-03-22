@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  license_plate: MyString
+  brand: MyString
+  color: MyString
+  capacity: 9.99
+  passenger_capacity: 1
+
+two:
+  license_plate: MyString
+  brand: MyString
+  color: MyString
+  capacity: 9.99
+  passenger_capacity: 1

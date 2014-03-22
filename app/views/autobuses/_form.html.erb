@@ -1,0 +1,37 @@
+<%= form_for(@autobus) do |f| %>
+  <% if @autobus.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@autobus.errors.count, "error") %> prohibited this autobus from being saved:</h2>
+
+      <ul>
+      <% @autobus.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :license_plate %><br>
+    <%= f.text_field :license_plate %>
+  </div>
+  <div class="field">
+    <%= f.label :brand %><br>
+    <%= f.text_field :brand %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :capacity %><br>
+    <%= f.text_field :capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :passenger_capacity %><br>
+    <%= f.number_field :passenger_capacity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

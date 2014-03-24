@@ -8,6 +8,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.string :email
       t.datetime :hire_date
       t.integer :department_id
+      t.integer :station_id
 
       t.timestamps
     end

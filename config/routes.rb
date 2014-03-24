@@ -1,4 +1,7 @@
 DbProject::Application.routes.draw do
+  devise_for :users
+  resources :employees
+
   resources :shipments
 
   resources :tickets
@@ -16,8 +19,6 @@ DbProject::Application.routes.draw do
   resources :categories
 
   resources :autobuses
-
-  resources :employees
 
   resources :departments
 

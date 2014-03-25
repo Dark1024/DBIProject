@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140325115713) do
+ActiveRecord::Schema.define(version: 20140325132832) do
 
   create_table "assistents", force: true do |t|
     t.string   "first_names"
@@ -128,21 +128,22 @@ ActiveRecord::Schema.define(version: 20140325115713) do
 
   create_table "tickets", force: true do |t|
     t.integer  "client_id"
-    t.integer  "employee_id"
     t.integer  "fare_id"
     t.integer  "trip_id"
     t.datetime "trip_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "employee_id"
   end
 
   create_table "trips", force: true do |t|
-    t.integer  "employee_id"
     t.integer  "autobus_id"
     t.integer  "schedule_id"
     t.integer  "available_seats"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "driver_id"
+    t.integer  "assistent_id"
   end
 
   create_table "users", force: true do |t|

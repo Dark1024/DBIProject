@@ -1,5 +1,6 @@
 class Trip < ActiveRecord::Base
-  belongs_to :employee
+  belongs_to :driver
+  belongs_to :assistent
   belongs_to :autobus
   belongs_to :schedule
   has_many :tickets

@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140324175425) do
+ActiveRecord::Schema.define(version: 20140325115713) do
+
+  create_table "assistents", force: true do |t|
+    t.string   "first_names"
+    t.string   "last_names"
+    t.text     "address"
+    t.string   "phone_number"
+    t.string   "email"
+    t.datetime "hire_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "autobuses", force: true do |t|
     t.string   "license_plate"
@@ -50,6 +61,17 @@ ActiveRecord::Schema.define(version: 20140324175425) do
   create_table "departments", force: true do |t|
     t.string   "name"
     t.text     "details"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "drivers", force: true do |t|
+    t.string   "first_names"
+    t.string   "last_names"
+    t.text     "address"
+    t.string   "phone_number"
+    t.string   "email"
+    t.datetime "hire_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,4 +1,8 @@
 DbProject::Application.routes.draw do
+  resources :assistents
+
+  resources :drivers
+
   root :to => "page#home"
 
   get "page/home"

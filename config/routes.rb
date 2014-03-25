@@ -1,4 +1,7 @@
 DbProject::Application.routes.draw do
+  root :to => "page#home"
+
+  get "page/home"
   devise_for :users
   resources :employees
 

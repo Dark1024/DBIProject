@@ -1,13 +1,64 @@
 <!DOCTYPE html>
+<html lang="en">
+  
 <html>
 <head>
-  <title>DbProject</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Pineda Transportes</title>
+  <%= stylesheet_link_tag    "http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css", media: "all", "data-turbolinks-track" => true %>
+  
+  <%= stylesheet_link_tag    "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    'http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic', media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    'http://fonts.googleapis.com/css?family=Montserrat:400,700', media: "all", "data-turbolinks-track" => true %>
+  
+  <%= stylesheet_link_tag    "grayscale.css", media: "all", "data-turbolinks-track" => true %>
+  
+  <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js", "data-turbolinks-track" => true %>
+  
+  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "grayscale.js", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="#page-top">
+          <i class="fa fa-play-circle"></i> <%= image_tag("PT.png") %>
+        </a>
+      </div>
+       
+       <!-- Collect the nav links, forms, and other content for toggling -->
+       <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+         <ul class="nav navbar-nav">
+           <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+           <li class="hidden">
+             <a href="#page-top"></a>
+           </li>
+           <li class="page-scroll">
+             <a href="#about">Nuestra Empresa</a>
+           </li>
+           <li class="page-scroll">
+             <a href="#download">Download</a>
+           </li>
+           <li class="page-scroll">
+             <a href="#contact">Contacto</a>
+           </li>
+         </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+        <!-- /.container -->
+  </nav>
 <%= yield %>
 
 </body>

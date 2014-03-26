@@ -16,9 +16,18 @@
     <%= f.time_select :departure_time %>
   </div>
   <div class="field">
+    <%= f.label :from_station_id %><br>
+    <%= f.text_field :from_station_id %>
+  </div>
+  <div class="field">
     <%= f.label :arrival_time %><br>
     <%= f.time_select :arrival_time %>
   </div>
+  <div class="field">
+    <%= f.label :to_station_id %><br>
+    <%= f.text_field :to_station_id %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

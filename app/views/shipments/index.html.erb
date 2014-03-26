@@ -1,35 +1,43 @@
-<h1>Listing shipments</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Client</th>
-      <th>Addressee</th>
-      <th>Phone number</th>
-      <th>Trip</th>
-      <th>Cost</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @shipments.each do |shipment| %>
-      <tr>
-        <td><%= shipment.client_id %></td>
-        <td><%= shipment.addressee %></td>
-        <td><%= shipment.phone_number %></td>
-        <td><%= shipment.trip_id %></td>
-        <td><%= shipment.cost_id %></td>
-        <td><%= link_to 'Show', shipment %></td>
-        <td><%= link_to 'Edit', edit_shipment_path(shipment) %></td>
-        <td><%= link_to 'Destroy', shipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<div class="container all">
+  <div class="col-md-8">
+    <div class="row">
+      <h3>Encomiendas</h3>
+    </div>    
+    <div class="row">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Destinatario</th>
+              <th>Telefono</th>
+              <th>Viaje</th>
+              <th>Costo</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <% @shipments.each do |shipment| %>
+              <tr>
+                <td><%= shipment.client_id %></td>
+                <td><%= shipment.addressee %></td>
+                <td><%= shipment.phone_number %></td>
+                <td><%= shipment.trip_id %></td>
+                <td><%= shipment.cost_id %></td>
+                <td><%= link_to 'Show', shipment %></td>
+                <td><%= link_to 'Edit', edit_shipment_path(shipment) %></td>
+                <td><%= link_to 'Destroy', shipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>    
+    </div>   
+  </div>    
+</div>
 <br>
 
 <%= link_to 'New Shipment', new_shipment_path %>

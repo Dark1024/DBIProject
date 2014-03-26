@@ -1,34 +1,44 @@
-<p id="notice"><%= notice %></p>
+<div class="container all">
+  <div class="col-md-8">
+    <div class="row">
+      <h3>Ayudante</h3>
+    </div>    
+    <div class="row">
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First names:</strong>
-  <%= @assistent.first_names %>
-</p>
+      <p>
+        <strong>Nombres</strong>
+        <%= @assistent.first_names %>
+      </p>
+      
+      <p>
+        <strong>Apellidos:</strong>
+        <%= @assistent.last_names %>
+      </p>
+      
+      <p>
+        <strong>Direccion:</strong>
+        <%= @assistent.address %>
+      </p>
+      
+      <p>
+        <strong>Telefono:</strong>
+        <%= @assistent.phone_number %>
+      </p>
+      
+      <p>
+        <strong>Email:</strong>
+        <%= @assistent.email %>
+      </p>
+      
+      <p>
+        <strong>Fecha de Contratacion:</strong>
+        <%= @assistent.hire_date %>
+      </p>
+      
+      <%= link_to 'Edit', edit_assistent_path(@assistent) %> |
+      <%= link_to 'Back', assistents_path %>
 
-<p>
-  <strong>Last names:</strong>
-  <%= @assistent.last_names %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @assistent.address %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @assistent.phone_number %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @assistent.email %>
-</p>
-
-<p>
-  <strong>Hire date:</strong>
-  <%= @assistent.hire_date %>
-</p>
-
-<%= link_to 'Edit', edit_assistent_path(@assistent) %> |
-<%= link_to 'Back', assistents_path %>
+    </div>   
+  </div>    
+</div>

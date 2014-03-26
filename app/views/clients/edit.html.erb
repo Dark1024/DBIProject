@@ -1,6 +1,13 @@
-<h1>Editing client</h1>
+<div class="container all">
+  <div class="col-md-8">
+    <div class="row">
+      <h3>Editar Cliente</h3>
+    </div>    
+    <div class="row">
+      <%= render 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @client %> |
-<%= link_to 'Back', clients_path %>
+      <%= link_to 'Show', @client %> |
+      <%= link_to 'Back', clients_path %>
+    </div>   
+  </div>    
+</div>

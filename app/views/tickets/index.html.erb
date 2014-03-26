@@ -1,35 +1,43 @@
-<h1>Listing tickets</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Client</th>
-      <th>Employee</th>
-      <th>Fare</th>
-      <th>Trip</th>
-      <th>Trip date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tickets.each do |ticket| %>
-      <tr>
-        <td><%= ticket.client_id %></td>
-        <td><%= ticket.employee_id %></td>
-        <td><%= ticket.fare_id %></td>
-        <td><%= ticket.trip_id %></td>
-        <td><%= ticket.trip_date %></td>
-        <td><%= link_to 'Show', ticket %></td>
-        <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
-        <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<div class="container all">
+  <div class="col-md-8">
+    <div class="row">
+      <h3>Boletos</h3>
+    </div>    
+    <div class="row">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Empleado</th>
+              <th>Tarifa</th>
+              <th>Viaje</th>
+              <th>Fecha</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <% @tickets.each do |ticket| %>
+              <tr>
+                <td><%= ticket.client_id %></td>
+                <td><%= ticket.employee_id %></td>
+                <td><%= ticket.fare_id %></td>
+                <td><%= ticket.trip_id %></td>
+                <td><%= ticket.trip_date %></td>
+                <td><%= link_to 'Show', ticket %></td>
+                <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
+                <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>    
+    </div>   
+  </div>    
+</div>
 <br>
 
 <%= link_to 'New Ticket', new_ticket_path %>

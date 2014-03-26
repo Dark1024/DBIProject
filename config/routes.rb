@@ -1,12 +1,15 @@
 DbProject::Application.routes.draw do
+  
+  root :to => "page#home"
+  
   resources :assistents
 
   resources :drivers
-
-  root :to => "page#home"
-
+  
   get "page/home"
-  devise_for :users
+  
+  #devise_for :users
+  
   resources :employees
 
   resources :shipments
@@ -30,7 +33,8 @@ DbProject::Application.routes.draw do
   resources :departments
 
   resources :stations
-
+  
+  devise_for :users 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

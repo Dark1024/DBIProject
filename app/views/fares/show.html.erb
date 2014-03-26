@@ -1,34 +1,44 @@
-<p id="notice"><%= notice %></p>
+<div class="container all">
+  <div class="col-md-8">
+    <div class="row">
+      <h3>Tarifa de Boleto</h3>
+    </div>    
+    <div class="row">
+      <p id="notice"><%= notice %></p>
+      
+      <p>
+        <strong>Nombre:</strong>
+        <%= @fare.name %>
+      </p>
+      
+      <p>
+        <strong>Precio:</strong>
+        <%= @fare.price %>
+      </p>
+      
+      <p>
+        <strong>De:</strong>
+        <%= @fare.from %>
+      </p>
+      
+      <p>
+        <strong>A:</strong>
+        <%= @fare.to %>
+      </p>
+      
+      <p>
+        <strong>Escala:</strong>
+        <%= @fare.stopover %>
+      </p>
+      
+      <p>
+        <strong>Categoria:</strong>
+        <%= @fare.category_id %>
+      </p>
+      
+      <%= link_to 'Edit', edit_fare_path(@fare) %> |
+      <%= link_to 'Back', fares_path %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @fare.name %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @fare.price %>
-</p>
-
-<p>
-  <strong>From:</strong>
-  <%= @fare.from %>
-</p>
-
-<p>
-  <strong>To:</strong>
-  <%= @fare.to %>
-</p>
-
-<p>
-  <strong>Stopover:</strong>
-  <%= @fare.stopover %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @fare.category_id %>
-</p>
-
-<%= link_to 'Edit', edit_fare_path(@fare) %> |
-<%= link_to 'Back', fares_path %>
+    </div>   
+  </div>    
+</div>

@@ -1,6 +1,14 @@
-<h1>Editing cost</h1>
+<div class="container all">
+  <div class="col-md-8">
+    <div class="row">
+      <h3>Editar Ayudante</h3>
+    </div>    
+    <div class="row">
+      <%= render 'form' %>
 
-<%= render 'form' %>
+      <%= link_to 'Show', @cost %> |
+      <%= link_to 'Back', costs_path %>
 
-<%= link_to 'Show', @cost %> |
-<%= link_to 'Back', costs_path %>
+    </div>   
+  </div>    
+</div>

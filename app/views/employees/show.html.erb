@@ -1,44 +1,55 @@
-<p id="notice"><%= notice %></p>
+<div class="container all">
+  <div class="col-md-8">
+    <div class="row">
+      <h3>Empleado</h3>
+    </div>    
+    <div class="row">
+      <p id="notice"><%= notice %></p>
+      
+      <p>
+        <strong>Nombres:</strong>
+        <%= @employee.first_names %>
+      </p>
+      
+      <p>
+        <strong>Apellidos:</strong>
+        <%= @employee.last_names %>
+      </p>
+      
+      <p>
+        <strong>Direccion:</strong>
+        <%= @employee.address %>
+      </p>
+      
+      <p>
+        <strong>Telefono:</strong>
+        <%= @employee.phone_number %>
+      </p>
+      
+      <p>
+        <strong>Email:</strong>
+        <%= @employee.email %>
+      </p>
+      
+      <p>
+        <strong>Fecha de Contratacion:</strong>
+        <%= @employee.hire_date %>
+      </p>
+      
+      <p>
+        <strong>Departamento:</strong>
+        <%= @employee.department_id %>
+      </p>
+      
+      <p>
+        <strong>Estacion:</strong>
+        <%= @employee.station_id %>
+      </p>
+      
+      <%= link_to 'Edit', edit_employee_path(@employee) %> |
+      <%= link_to 'Back', employees_path %>
+    </div>   
+  </div>    
+</div>
 
-<p>
-  <strong>First names:</strong>
-  <%= @employee.first_names %>
-</p>
 
-<p>
-  <strong>Last names:</strong>
-  <%= @employee.last_names %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @employee.address %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @employee.phone_number %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @employee.email %>
-</p>
-
-<p>
-  <strong>Hire date:</strong>
-  <%= @employee.hire_date %>
-</p>
-
-<p>
-  <strong>Department:</strong>
-  <%= @employee.department_id %>
-</p>
-
-<p>
-  <strong>Station:</strong>
-  <%= @employee.station_id %>
-</p>
-
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>

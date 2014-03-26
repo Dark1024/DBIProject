@@ -1,34 +1,43 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @cost.name %>
-</p>
-
-<p>
-  <strong>From:</strong>
-  <%= @cost.from %>
-</p>
-
-<p>
-  <strong>To:</strong>
-  <%= @cost.to %>
-</p>
-
-<p>
-  <strong>Stopover:</strong>
-  <%= @cost.stopover %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @cost.content %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @cost.price %>
-</p>
-
-<%= link_to 'Edit', edit_cost_path(@cost) %> |
-<%= link_to 'Back', costs_path %>
+<div class="container all">
+  <div class="col-md-8">
+    <div class="row">
+      <h3>Costo</h3>
+    </div>    
+    <div class="row">
+      <p id="notice"><%= notice %></p>
+      
+      <p>
+        <strong>Nombre:</strong>
+        <%= @cost.name %>
+      </p>
+      
+      <p>
+        <strong>De:</strong>
+        <%= @cost.from %>
+      </p>
+      
+      <p>
+        <strong>A:</strong>
+        <%= @cost.to %>
+      </p>
+      
+      <p>
+        <strong>Escala:</strong>
+        <%= @cost.stopover %>
+      </p>
+      
+      <p>
+        <strong>Contenido:</strong>
+        <%= @cost.content %>
+      </p>
+      
+      <p>
+        <strong>Precio:</strong>
+        <%= @cost.price %>
+      </p>
+      
+      <%= link_to 'Edit', edit_cost_path(@cost) %> |
+      <%= link_to 'Back', costs_path %>
+    </div>   
+  </div>    
+</div>

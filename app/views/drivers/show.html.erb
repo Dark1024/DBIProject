@@ -1,34 +1,44 @@
-<p id="notice"><%= notice %></p>
+<div class="container all">
+  <div class="col-md-8">
+    <div class="row">
+      <h3>Conductor</h3>
+    </div>    
+    <div class="row">
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First names:</strong>
-  <%= @driver.first_names %>
-</p>
+      <p>
+        <strong>Nombres:</strong>
+        <%= @driver.first_names %>
+      </p>
+      
+      <p>
+        <strong>Apellidos:</strong>
+        <%= @driver.last_names %>
+      </p>
+      
+      <p>
+        <strong>Direccion:</strong>
+        <%= @driver.address %>
+      </p>
+      
+      <p>
+        <strong>Telefono:</strong>
+        <%= @driver.phone_number %>
+      </p>
+      
+      <p>
+        <strong>Email:</strong>
+        <%= @driver.email %>
+      </p>
+      
+      <p>
+        <strong>Fecha de Contratacion:</strong>
+        <%= @driver.hire_date %>
+      </p>
+      
+      <%= link_to 'Edit', edit_driver_path(@driver) %> |
+      <%= link_to 'Back', drivers_path %>
+    </div>   
+  </div>    
+</div>
 
-<p>
-  <strong>Last names:</strong>
-  <%= @driver.last_names %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @driver.address %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @driver.phone_number %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @driver.email %>
-</p>
-
-<p>
-  <strong>Hire date:</strong>
-  <%= @driver.hire_date %>
-</p>
-
-<%= link_to 'Edit', edit_driver_path(@driver) %> |
-<%= link_to 'Back', drivers_path %>

@@ -1,29 +1,40 @@
-<p id="notice"><%= notice %></p>
+<div class="container all">
+  <div class="col-md-8">
+    <div class="row">
+      <h3>Ayudante</h3>
+    </div>    
+    <div class="row">
+      <p id="notice"><%= notice %></p>
+      
+      <p>
+        <strong>Cliente:</strong>
+        <%= @shipment.client_id %>
+      </p>
+      
+      <p>
+        <strong>Destinatario:</strong>
+        <%= @shipment.addressee %>
+      </p>
+      
+      <p>
+        <strong>Telefono:</strong>
+        <%= @shipment.phone_number %>
+      </p>
+      
+      <p>
+        <strong>Viaje:</strong>
+        <%= @shipment.trip_id %>
+      </p>
+      
+      <p>
+        <strong>Costo:</strong>
+        <%= @shipment.cost_id %>
+      </p>
+      
+      <%= link_to 'Edit', edit_shipment_path(@shipment) %> |
+      <%= link_to 'Back', shipments_path %>
+    </div>   
+  </div>    
+</div>
 
-<p>
-  <strong>Client:</strong>
-  <%= @shipment.client_id %>
-</p>
 
-<p>
-  <strong>Addressee:</strong>
-  <%= @shipment.addressee %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @shipment.phone_number %>
-</p>
-
-<p>
-  <strong>Trip:</strong>
-  <%= @shipment.trip_id %>
-</p>
-
-<p>
-  <strong>Cost:</strong>
-  <%= @shipment.cost_id %>
-</p>
-
-<%= link_to 'Edit', edit_shipment_path(@shipment) %> |
-<%= link_to 'Back', shipments_path %>

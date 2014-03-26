@@ -1,36 +1,45 @@
-<h1>Listing drivers</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>First names</th>
-      <th>Last names</th>
-      <th>Address</th>
-      <th>Phone number</th>
-      <th>Email</th>
-      <th>Hire date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @drivers.each do |driver| %>
-      <tr>
-        <td><%= driver.first_names %></td>
-        <td><%= driver.last_names %></td>
-        <td><%= driver.address %></td>
-        <td><%= driver.phone_number %></td>
-        <td><%= driver.email %></td>
-        <td><%= driver.hire_date %></td>
-        <td><%= link_to 'Show', driver %></td>
-        <td><%= link_to 'Edit', edit_driver_path(driver) %></td>
-        <td><%= link_to 'Destroy', driver, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container all">
+  <div class="col-md-8">
+    <div class="row">
+      <h3>Conductores</h3>
+    </div>    
+    <div class="row">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Direccion</th>
+              <th>Telefono</th>
+              <th>Email</th>
+              <th>Fecha de Contracion</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <% @drivers.each do |driver| %>
+              <tr>
+                <td><%= driver.first_names %></td>
+                <td><%= driver.last_names %></td>
+                <td><%= driver.address %></td>
+                <td><%= driver.phone_number %></td>
+                <td><%= driver.email %></td>
+                <td><%= driver.hire_date %></td>
+                <td><%= link_to 'Show', driver %></td>
+                <td><%= link_to 'Edit', edit_driver_path(driver) %></td>
+                <td><%= link_to 'Destroy', driver, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>    
+    </div>   
+  </div>    
+</div>
 
 <br>
 

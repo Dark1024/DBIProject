@@ -1,6 +1,13 @@
-<h1>Editing trip</h1>
+<div class="container all">
+  <div class="col-md-8">
+    <div class="row">
+      <h3>Editar Viaje</h3>
+    </div>    
+    <div class="row">
+      <%= render 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @trip %> |
-<%= link_to 'Back', trips_path %>
+      <%= link_to 'Show', @trip %> |
+      <%= link_to 'Back', trips_path %>
+    </div>   
+  </div>    
+</div>

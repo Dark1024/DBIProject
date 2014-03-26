@@ -1,29 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="container all">
+  <div class="col-md-8">
+    <div class="row">
+      <h3>Boleto</h3>
+    </div>    
+    <div class="row">
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Client:</strong>
-  <%= @ticket.client_id %>
-</p>
-
-<p>
-  <strong>Employee:</strong>
-  <%= @ticket.employee_id %>
-</p>
-
-<p>
-  <strong>Fare:</strong>
-  <%= @ticket.fare_id %>
-</p>
-
-<p>
-  <strong>Trip:</strong>
-  <%= @ticket.trip_id %>
-</p>
-
-<p>
-  <strong>Trip date:</strong>
-  <%= @ticket.trip_date %>
-</p>
-
-<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
-<%= link_to 'Back', tickets_path %>
+      <p>
+        <strong>Cliente:</strong>
+        <%= @ticket.client_id %>
+      </p>
+      
+      <p>
+        <strong>Empleado:</strong>
+        <%= @ticket.employee_id %>
+      </p>
+      
+      <p>
+        <strong>Tarifa:</strong>
+        <%= @ticket.fare_id %>
+      </p>
+      
+      <p>
+        <strong>Viaje:</strong>
+        <%= @ticket.trip_id %>
+      </p>
+      
+      <p>
+        <strong>Fecha:</strong>
+        <%= @ticket.trip_date %>
+      </p>
+      
+      <%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+      <%= link_to 'Back', tickets_path %>
+    </div>   
+  </div>    
+</div>

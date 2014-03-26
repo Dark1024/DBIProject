@@ -1,7 +1,7 @@
 class CostsController < ApplicationController
   before_action :set_cost, only: [:show, :edit, :update, :destroy]
-  before_action :confirm_session
-  before_action :admin_session
+  before_action :confirm_session, :except => [:index]
+  before_action :admin_session, :except => [:index]
   # GET /costs
   # GET /costs.json
   def index

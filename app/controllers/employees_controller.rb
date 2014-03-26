@@ -1,6 +1,7 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
-
+  before_action :confirm_session
+  before_action :admin_session
   # GET /employees
   # GET /employees.json
   def index

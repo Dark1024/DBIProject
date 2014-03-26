@@ -1,6 +1,7 @@
 class StationsController < ApplicationController
   before_action :set_station, only: [:show, :edit, :update, :destroy]
-
+  before_action :confirm_session
+  before_action :admin_session
   # GET /stations
   # GET /stations.json
   def index

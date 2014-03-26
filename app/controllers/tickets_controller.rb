@@ -1,7 +1,8 @@
 class TicketsController < ApplicationController
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
   before_action :confirm_session
-
+  before_action :admin_session, :except => [:create,:new]
+  
   # GET /tickets
   # GET /tickets.json
   def index
@@ -64,10 +65,7 @@ class TicketsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def confirm_session
-      redirect_to("/users/sign_in") unless user_signed_in?
-    end
-    
+  
     def set_ticket
       @ticket = Ticket.find(params[:id])
     end

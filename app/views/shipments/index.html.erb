@@ -8,11 +8,9 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>Cliente</th>
+              
               <th>Destinatario</th>
               <th>Telefono</th>
-              <th>Viaje</th>
-              <th>Costo</th>
               <th></th>
               <th></th>
               <th></th>
@@ -22,11 +20,9 @@
           <tbody>
             <% @shipments.each do |shipment| %>
               <tr>
-                <td><%= shipment.client_id %></td>
+                
                 <td><%= shipment.addressee %></td>
                 <td><%= shipment.phone_number %></td>
-                <td><%= shipment.trip_id %></td>
-                <td><%= shipment.cost_id %></td>
                 <td><%= link_to 'Show', shipment %></td>
                 <td><%= link_to 'Edit', edit_shipment_path(shipment) %></td>
                 <td><%= link_to 'Destroy', shipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

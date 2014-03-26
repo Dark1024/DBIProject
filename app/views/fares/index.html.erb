@@ -12,8 +12,7 @@
               <th>Precio</th>
               <th>De</th>
               <th>A</th>
-              <th>Escala</th>
-              <th>Categoria</th>
+              <th>Escala</th>              
               <th></th>
               <th></th>
               <th></th>
@@ -28,7 +27,6 @@
                 <td><%= fare.from %></td>
                 <td><%= fare.to %></td>
                 <td><%= fare.stopover %></td>
-                <td><%= fare.category_id %></td>
                 <td><%= link_to 'Show', fare %></td>
                 <td><%= link_to 'Edit', edit_fare_path(fare) %></td>
                 <td><%= link_to 'Destroy', fare, method: :delete, data: { confirm: 'Are you sure?' } %></td>

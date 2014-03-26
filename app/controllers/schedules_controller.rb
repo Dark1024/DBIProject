@@ -1,6 +1,7 @@
 class SchedulesController < ApplicationController
   before_action :set_schedule, only: [:show, :edit, :update, :destroy]
-
+  before_action :confirm_session
+  before_action :admin_session
   # GET /schedules
   # GET /schedules.json
   def index
@@ -69,6 +70,6 @@ class SchedulesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def schedule_params
-      params.require(:schedule).permit(:departure_time, :arrival_time)
+      params.require(:schedule).permit(:departure_time, :arrival_time, :from_station_id, :to_station_id)
     end
 end

@@ -1,6 +1,7 @@
 class AssistentsController < ApplicationController
   before_action :set_assistent, only: [:show, :edit, :update, :destroy]
-
+  before_action :confirm_session
+  before_action :admin_session
   # GET /assistents
   # GET /assistents.json
   def index

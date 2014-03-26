@@ -13,24 +13,20 @@
 
   <div class="field">
     <%= f.label :driver_id %><br>
-    <%= f.number_field :driver_id %>
+    <%= f.select :driver_id, options_from_collection_for_select(Driver.all, :id, :first_names) %>
   </div>
   <div class="field">
     <%= f.label :assistent_id %><br>
-    <%= f.number_field :assistent_id %>
+    <%= f.select :assistent_id, options_from_collection_for_select(Assistent.all, :id, :first_names) %>
   </div>
   <div class="field">
     <%= f.label :autobus_id %><br>
-    <%= f.number_field :autobus_id %>
+    <%= f.select :autobus_id, options_from_collection_for_select(Autobus.all, :id, :brand) %>
   </div>
   <div class="field">
     <%= f.label :schedule_id %><br>
-    <%= f.number_field :schedule_id %>
-  </div>
-  <div class="field">
-    <%= f.label :available_seats %><br>
-    <%= f.number_field :available_seats %>
-  </div>
+    <%= f.select :schedule_id, options_from_collection_for_select(Schedule.all, :id, :departure_time, :from_station_id) %>
+  </div>    
   <div class="actions">
     <%= f.submit %>
   </div>

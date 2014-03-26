@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :client_id %><br>
-    <%= f.number_field :client_id %>
+    <%= f.select :client_id, options_from_collection_for_select(Client.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :addressee %><br>
@@ -25,11 +25,11 @@
   </div>
   <div class="field">
     <%= f.label :trip_id %><br>
-    <%= f.number_field :trip_id %>
+    <%= f.select :trip_id, options_from_collection_for_select(Trip.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :cost_id %><br>
-    <%= f.number_field :cost_id %>
+    <%= f.select :cost_id, options_from_collection_for_select(Cost.all, :id, :name) %>
   </div>
   <div class="actions">
     <%= f.submit %>

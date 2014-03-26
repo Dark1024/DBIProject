@@ -54,20 +54,87 @@
              <a href="/fares">Tarifas</a>
            </li>
            <li class="page-scroll">
-             <a href="/shipments">Encomiendas</a>
+             <a href="/costs">Couriers</a>
            </li>
+           <% if user_signed_in? %>
+             <% if current_user.admin? %>
+               <li class="page-scroll">
+                 <a href="/assistents">Ayudantes</a>
+               </li>
+             <% end %>
+           <% end %>
+           <% if user_signed_in? %>
+             <% if current_user.admin? %>
+               <li class="page-scroll">
+                 <a href="/autobuses">Autobuses</a>
+               </li>
+             <% end %>
+           <% end %>
+           <% if user_signed_in? %>
+             <% if current_user.admin? %>
+               <li class="page-scroll">
+                 <a href="/categories">Categorias</a>
+               </li>
+             <% end %>
+           <% end %>
+           <% if user_signed_in? %>
+             <% if current_user.admin? %>
+               <li class="page-scroll">
+                 <a href="/clients">Clientes</a>
+               </li>
+             <% end %>
+           <% end %>
+           <% if user_signed_in? %>
+             <% if current_user.admin? %>
+               <li class="page-scroll">
+                 <a href="/costs">Tarifa Courier</a>
+               </li>
+             <% end %>
+           <% end %>
+           <% if user_signed_in? %>
+             <% if current_user.admin? %>
+               <li class="page-scroll">
+                 <a href="/deparments">Departamentos</a>
+               </li>
+             <% end %>
+           <% end %>
+           <% if user_signed_in? %>
+             <% if current_user.admin? %>
+               <li class="page-scroll">
+                 <a href="/drivers">Conductores</a>
+               </li>
+             <% end %>
+           <% end %>
+           <% if user_signed_in? %>
+             <% if current_user.admin? %>
+               <li class="page-scroll">
+                 <a href="/employees">Empleados</a>
+               </li>
+             <% end %>
+           <% end %>
+           <% if user_signed_in? %>
+             <% if current_user.admin? %>
+               <li class="page-scroll">
+                 <a href="/schedules">Horarios</a>
+               </li>
+             <% end %>
+           <% end %>
+           <% if user_signed_in? %>
+             <% if current_user.admin? %>
+               <li class="page-scroll">
+                 <a href="/trips">Viajes</a>
+               </li>
+             <% end %>
+           <% end %>
            <li class="page-scroll">
              <a href="#about">Nuestra Empresa</a>
            </li>
            <li class="page-scroll">
              <a href="#contact">Contacto</a>
            </li>
-           <li class="page-scroll">
-             <a href="#download">Download</a>
-           </li>
            <% if user_signed_in? %>
              <li class="pate-scroll">
-               <a href="/tickets">Comprar Boleto</a>
+               <a href="/tickets/new">Comprar Boleto</a>
              </li>
            <% end %>
            <% if user_signed_in? %>

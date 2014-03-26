@@ -1,6 +1,7 @@
 class FaresController < ApplicationController
   before_action :set_fare, only: [:show, :edit, :update, :destroy]
-
+  before_action :confirm_session
+  before_action :admin_session
   # GET /fares
   # GET /fares.json
   def index

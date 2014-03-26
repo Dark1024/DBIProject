@@ -7,11 +7,6 @@
       <p id="notice"><%= notice %></p>
       
       <p>
-        <strong>Cliente:</strong>
-        <%= @shipment.client_id %>
-      </p>
-      
-      <p>
         <strong>Destinatario:</strong>
         <%= @shipment.addressee %>
       </p>
@@ -19,16 +14,6 @@
       <p>
         <strong>Telefono:</strong>
         <%= @shipment.phone_number %>
-      </p>
-      
-      <p>
-        <strong>Viaje:</strong>
-        <%= @shipment.trip_id %>
-      </p>
-      
-      <p>
-        <strong>Costo:</strong>
-        <%= @shipment.cost_id %>
       </p>
       
       <%= link_to 'Edit', edit_shipment_path(@shipment) %> |

@@ -35,17 +35,7 @@
         <strong>Fecha de Contratacion:</strong>
         <%= @employee.hire_date %>
       </p>
-      
-      <p>
-        <strong>Departamento:</strong>
-        <%= @employee.department_id %>
-      </p>
-      
-      <p>
-        <strong>Estacion:</strong>
-        <%= @employee.station_id %>
-      </p>
-      
+          
       <%= link_to 'Edit', edit_employee_path(@employee) %> |
       <%= link_to 'Back', employees_path %>
     </div>   

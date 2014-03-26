@@ -14,8 +14,6 @@
               <th>Telefono</th>
               <th>Email</th>
               <th>Fecha de Contratacion</th>
-              <th>Departamento</th>
-              <th>Estacion</th>
               <th></th>
               <th></th>
               <th></th>
@@ -31,8 +29,6 @@
                 <td><%= employee.phone_number %></td>
                 <td><%= employee.email %></td>
                 <td><%= employee.hire_date %></td>
-                <td><%= employee.department_id %></td>
-                <td><%= employee.station_id %></td>
                 <td><%= link_to 'Show', employee %></td>
                 <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
                 <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>

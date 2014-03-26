@@ -37,11 +37,11 @@
   </div>
   <div class="field">
     <%= f.label :department_id %><br>
-    <%= f.number_field :department_id %>
+    <%= f.select :department_id, options_from_collection_for_select(Department.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :station_id %><br>
-    <%= f.number_field :station_id %>
+    <%= f.select :station_id, options_from_collection_for_select(Station.all, :id, :name) %>
   </div>
   <div class="actions">
     <%= f.submit %>

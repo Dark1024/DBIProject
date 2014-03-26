@@ -13,19 +13,19 @@
 
   <div class="field">
     <%= f.label :client_id %><br>
-    <%= f.number_field :client_id %>
+    <%= f.select :client_id, options_from_collection_for_select(Client.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :employee_id %><br>
-    <%= f.number_field :employee_id %>
+    <%= f.select :employee_id, options_from_collection_for_select(Employee.all, :id, :first_names) %>
   </div>
   <div class="field">
     <%= f.label :fare_id %><br>
-    <%= f.number_field :fare_id %>
+    <%= f.select :fare_id, options_from_collection_for_select(Fare.all, :id, :name) %>    
   </div>
   <div class="field">
     <%= f.label :trip_id %><br>
-    <%= f.number_field :trip_id %>
+    <%= f.select :trip_id, options_from_collection_for_select(Trip.all, :id, :schedule_id) %>
   </div>
   <div class="field">
     <%= f.label :trip_date %><br>
